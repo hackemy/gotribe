@@ -19,75 +19,75 @@ if err != nil {
 
 ## Retrieve Users
 ```
-	query := url.Values{
-		"pub_isAirBnbListing": {"true"},
-	}
+query := url.Values{
+    "pub_isAirBnbListing": {"true"},
+}
 
-	hasNextPage := true
-	currentPage := 1
-	for hasNextPage {
-		query.Set("page", strconv.Itoa(currentPage))
-		query.Set("perPage", "10")
+hasNextPage := true
+currentPage := 1
+for hasNextPage {
+    query.Set("page", strconv.Itoa(currentPage))
+    query.Set("perPage", "10")
 
-		items, _, meta, err := users.Query(accessToken, query)
-		if err != nil {
-			fmt.Println(err.Error())
-			return
-		}
+    items, _, meta, err := users.Query(accessToken, query)
+    if err != nil {
+        fmt.Println(err.Error())
+        return
+    }
 
-		if len(items) == 0 {
-			fmt.Println("No users found")
-			return
-		}
+    if len(items) == 0 {
+        fmt.Println("No users found")
+        return
+    }
 
-		for _, user := range items {
-			fmt.Println(user)
-		}
+    for _, user := range items {
+        fmt.Println(user)
+    }
 
-		if currentPage >= meta.TotalPages {
-			hasNextPage = false
-		} else {
-			currentPage++
-			break
-		}
-	}
+    if currentPage >= meta.TotalPages {
+        hasNextPage = false
+    } else {
+        currentPage++
+        break
+    }
+}
 ```
 
 
 ## Retrieve Listings
 ```
-	query := url.Values{
-		"pub_isAirBnbListing": {"true"},
-	}
+query := url.Values{
+    "pub_isAirBnbListing": {"true"},
+}
 
-	hasNextPage := true
-	currentPage := 1
-	for hasNextPage {
-		query.Set("page", strconv.Itoa(currentPage))
-		query.Set("perPage", "10")
+hasNextPage := true
+currentPage := 1
+for hasNextPage {
+    query.Set("page", strconv.Itoa(currentPage))
+    query.Set("perPage", "10")
 
-		items, _, meta, err := listings.Query(accessToken, query)
-		if err != nil {
-			fmt.Println(err.Error())
-			return
-		}
+    items, _, meta, err := listings.Query(accessToken, query)
+    if err != nil {
+        fmt.Println(err.Error())
+        return
+    }
 
-		if len(items) == 0 {
-			fmt.Println("No listings found")
-			return
-		}
+    if len(items) == 0 {
+        fmt.Println("No listings found")
+        return
+    }
 
-		for _, listing := range items {
-			fmt.Println(listing)
-		}
+    for _, listing := range items {
+        fmt.Println(listing)
+    }
 
-		if currentPage >= meta.TotalPages {
-			hasNextPage = false
-		} else {
-			currentPage++
-			break
-		}
-	}
+    if currentPage >= meta.TotalPages {
+        hasNextPage = false
+    } else {
+        currentPage++
+        break
+    }
+}
 ```
 
 ## Retrieve Transactions
