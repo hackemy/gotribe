@@ -3,8 +3,8 @@ package listings
 import (
 	"encoding/json"
 
-	"github.com/ruralcoder/gotribe/common"
-	"github.com/ruralcoder/gotribe/models"
+	"github.com/hackemy/gotribe/common"
+	"github.com/hackemy/gotribe/models"
 )
 
 func Create(accessToken string, listing *models.Listing) error {

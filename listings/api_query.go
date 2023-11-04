@@ -3,8 +3,8 @@ package listings
 import (
 	"net/url"
 
-	"github.com/ruralcoder/gotribe/common"
-	"github.com/ruralcoder/gotribe/models"
+	"github.com/hackemy/gotribe/common"
+	"github.com/hackemy/gotribe/models"
 )
 
 func Query(accessToken string, query url.Values) ([]*models.Listing, []interface{}, *models.Meta, error) {

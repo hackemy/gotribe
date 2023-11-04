@@ -3,7 +3,7 @@ package gotribe
 import (
 	"time"
 
-	"github.com/ruralcoder/gotribe/common"
+	"github.com/hackemy/gotribe/common"
 )
 
 // Define the GetAccessToken function

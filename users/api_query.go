@@ -3,8 +3,8 @@ package users
 import (
 	"net/url"
 
-	"github.com/ruralcoder/gotribe/common"
-	"github.com/ruralcoder/gotribe/models"
+	"github.com/hackemy/gotribe/common"
+	"github.com/hackemy/gotribe/models"
 )
 
 func Query(accessToken string, query url.Values) ([]*models.User, []interface{}, *models.Meta, error) {
