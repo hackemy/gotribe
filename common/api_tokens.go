@@ -9,7 +9,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/hackemy/gotribe/models"
+	"github.com/ruralcoder/gotribe/models"
 )
 
 const SHARETRIBE_INTEGRATION = "integ"

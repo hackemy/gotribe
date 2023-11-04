@@ -4,7 +4,7 @@ import (
 	"net/url"
 	"strconv"
 
-	"github.com/hackemy/gotribe/models"
+	"github.com/ruralcoder/gotribe/models"
 )
 
 func GetAll(accessToken string, query url.Values) ([]*models.Transaction, error) {

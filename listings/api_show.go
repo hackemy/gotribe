@@ -3,8 +3,8 @@ package listings
 import (
 	"net/url"
 
-	"github.com/hackemy/gotribe/common"
-	"github.com/hackemy/gotribe/models"
+	"github.com/ruralcoder/gotribe/common"
+	"github.com/ruralcoder/gotribe/models"
 )
 
 func Show(accessToken string, query url.Values) (*models.Listing, error) {

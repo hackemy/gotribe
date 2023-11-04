@@ -1,3 +1,3 @@
-module github.com/hackemy/gotribe
+module github.com/ruralcoder/gotribe
 
 
