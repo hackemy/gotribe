@@ -7,7 +7,7 @@ import (
 	"github.com/ruralcoder/gotribe/models"
 )
 
-func Query(accessToken string, query url.Values) ([]models.User, []interface{}, *models.Meta, error) {
+func Query(accessToken string, query url.Values) ([]*models.User, []interface{}, *models.Meta, error) {
 
 	bodyBytes, err := common.GetData(accessToken, "/v1/integration_api/users/query", query)
 	if err != nil {
@@ -19,9 +19,9 @@ func Query(accessToken string, query url.Values) ([]models.User, []interface{}, 
 		return nil, nil, nil, err
 	}
 
-	results := []models.User{}
+	results := []*models.User{}
 	for _, item := range items {
-		if tx, ok := item.(models.User); ok {
+		if tx, ok := item.(*models.User); ok {
 			results = append(results, tx)
 		}
 	}

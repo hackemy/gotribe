@@ -1,6 +1,8 @@
 # gotribe
 Golang library for Sharetribe's APIs based off sharetribe public documentation.
 
+https://www.sharetribe.com/api-reference/integration.html
+
 Currently supports basic operations primarily to retrieve `users`, `listings` and `transactions`
 
 
