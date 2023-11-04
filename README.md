@@ -5,6 +5,12 @@ https://www.sharetribe.com/api-reference/integration.html
 
 Currently supports basic operations primarily to retrieve `users`, `listings` and `transactions`
 
+## Installing
+
+```
+go get github.com/hackemy/gotribe
+```
+
 
 ## Retrieve Access Token 
 
